@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.9"
+install:
+  - pip install -r requirements_travis.txt
+script:
+  - python -m compileall watchpage
+  - python -m pycodestyle watchpage
+  - python -m flake8 watchpage
+  - python -m build --outdir=dist .
+  - python -m pip install --verbose dist/*.whl
+  - python -m pip list
+  - python -m pip freeze
+  - ls -laR .
+  - python -m pip uninstall --yes --verbose watchpage
