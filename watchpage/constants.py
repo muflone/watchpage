@@ -18,4 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .constants import APP_VERSION as __version__                  # noqa: F401
+APP_NAME = 'WatchPage'
+APP_VERSION = '0.1.0'
+APP_DESCRIPTION = 'Watch webpages for changes'
+APP_ID = 'watchpage.muflone.com'
+APP_URL = 'http://www.muflone.com/watchpage/'
+APP_AUTHOR = 'Fabio Castelli'
+APP_AUTHOR_EMAIL = 'muflone@muflone.com'
+APP_COPYRIGHT = 'Copyright 2022 %s' % APP_AUTHOR
