@@ -18,12 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-import urllib.parse
-import urllib.request
-
-from bs4 import BeautifulSoup
-
 import yaml
+
+from watchpage.target import Target
 
 
 class Configuration(object):
@@ -34,88 +31,23 @@ class Configuration(object):
         self.filename = filename
         self.targets = {}
         with open(self.filename, 'r') as file:
-            self.values = {item['NAME']: item
-                           for item in yaml.load_all(stream=file,
-                                                     Loader=yaml.Loader)}
+            values = {item['NAME']: item
+                      for item in yaml.load_all(stream=file,
+                                                Loader=yaml.Loader)}
+        # Load targets
+        for name, value in values.items():
+            self.targets[name] = Target(
+                name=name,
+                url=value['URL'],
+                parser=value['PARSER'],
+                type=value['TYPE'],
+                use_absolute_urls=value.get('ABSOLUTE_URLS', False),
+                filters=value.get('FILTERS', []) or [])
 
-    def get_values(self) -> dict[str, list[dict]]:
+    def get_targets(self) -> list[Target]:
         """
-        Return the configuration values
+        Return the configuration targets
 
-        :return: list containing items
+        :return: targets list
         """
-        return self.values
-
-    def get_type(self, name) -> str:
-        """
-        Get the type associated to the item with the specified name
-
-        :param name: item name
-        :return: associated type
-        """
-        return self.values[name]['TYPE']
-
-    def get_filters(self, name) -> list[str]:
-        """
-        Get the filters associated to the item with the specified name
-
-        :param name: item name
-        :return: associated filters
-        """
-        return self.values[name].get('FILTERS', []) or []
-
-    def get_url(self, name) -> str:
-        """
-        Get the URL associated to the item with the specified name
-
-        :param name: item name
-        :return: associated URL
-        """
-        return self.values[name]['URL']
-
-    def open_url(self, name) -> str:
-        """
-        Get the result from the associated URL
-
-        :param name: item name
-        :return: parsed page
-        """
-        with urllib.request.urlopen(url=self.get_url(name=name)) as request:
-            results = request.read()
-        return results
-
-    def parse_url(self, name) -> BeautifulSoup:
-        """
-        Parser the associated URL
-
-        :param name: item name
-        :return: parsed page
-        """
-        parser = self.values[name]['PARSER']
-        soup = BeautifulSoup(markup=self.open_url(name=name),
-                             features=parser)
-        return soup
-
-    def get_links(self, name) -> list[str]:
-        """
-        Get all the links in the page
-
-        :param name: item name
-        :return: list of URLs
-        """
-        base_url = self.get_url(name=name)
-        parser = self.parse_url(name=name)
-        use_absolute_urls = self.values[name]['ABSOLUTE_URLS']
-        results = []
-        for anchor in parser.find_all('a'):
-            # Find only anchors with href
-            if 'href' in anchor.attrs:
-                if use_absolute_urls:
-                    # Make URL absolute
-                    url = urllib.parse.urljoin(base=base_url,
-                                               url=anchor['href'])
-                else:
-                    # Leave the URL as is
-                    url = anchor['href']
-                results.append(url)
-        return results
+        return list(self.targets.values())
