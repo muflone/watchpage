@@ -57,6 +57,11 @@ class CommandLineOptions(object):
                            required=True,
                            type=str,
                            help='directory to store the results')
+        group.add_argument('--dump',
+                           required=False,
+                           action='store_true',
+                           default=False,
+                           help='dump results and discard changes')
 
     def parse_options(self) -> argparse.Namespace:
         """

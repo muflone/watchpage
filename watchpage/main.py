@@ -55,8 +55,9 @@ def main():
             print('\n'.join(differences))
             print('-' * 79)
         # Save new results
-        with open(results_file, 'w') as file:
-            file.writelines(line + '\n' for line in new_results)
+        if not options.dump:
+            with open(results_file, 'w') as file:
+                file.writelines(line + '\n' for line in new_results)
 
 
 if __name__ == '__main__':
