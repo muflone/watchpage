@@ -52,6 +52,14 @@ All the targets specified in the configuration file `muflone_apps.yaml` will be
 processed, results will be saved in the `output` directory and the differences
 will be printed in the stdout.
 
+Launching again the previous command you **will not** get any results as there
+will not be further changes after the previous run.
+The saved items will be stored in the directory specified in the `results`
+argument.
+
+Adding `--dump` you can observe the returned values but the changes will not be
+saved.
+
 # Configuration file
 
 A configuration file is a YAML specification file with the following values:
