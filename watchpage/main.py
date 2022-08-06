@@ -52,7 +52,7 @@ def main():
             print(f'URL: {target.url}')
             print(f'Date: {datetime.datetime.now():%Y-%m-%d %H:%M.%S}')
             print()
-            print('\n'.join(differences))
+            print('\n'.join(sorted(differences)))
             print('-' * 79)
         # Save new results
         if not options.dump:
