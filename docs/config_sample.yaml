@@ -1,17 +1,11 @@
-NAME: dbeaver
-URL: https://github.com/dbeaver/dbeaver/tags
+NAME: gnome-appfolders-manager
+URL: https://github.com/muflone/gnome-appfolders-manager/tags
 PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - REGEX: https://
-  - NOT REGEX: http://
-  - STARTS: https://
-  - NOT STARTS: http://
-  - CONTAINS: /refs/tags/
-  - NOT CONTAINS: /foo/
+  - STARTS: https://github.com/muflone/gnome-appfolders-manager/archive/refs/tags/
   - ENDS: .tar.gz
-  - NOT ENDS: .zip
 STATUS: true
 ---
 NAME: dbeaver_plugins
@@ -29,3 +23,4 @@ TYPE: rss
 FILTERS:
   - ENDS: .tar.gz/download
 STATUS: true
+---
