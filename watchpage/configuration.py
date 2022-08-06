@@ -33,7 +33,8 @@ class Configuration(object):
         with open(self.filename, 'r') as file:
             values = {item['NAME']: item
                       for item in yaml.load_all(stream=file,
-                                                Loader=yaml.Loader)}
+                                                Loader=yaml.Loader)
+                      if item}
         # Load targets
         for name, value in values.items():
             if value.get('STATUS', True):
