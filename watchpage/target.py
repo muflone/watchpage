@@ -30,13 +30,13 @@ class Target(object):
                  name: str,
                  url: str,
                  parser: str,
-                 type: str,
+                 links: bool,
                  use_absolute_urls: bool,
                  filters: list):
         self.name = name
         self.url = url
         self.parser = parser
-        self.type = type
+        self.links = links
         self.use_absolute_urls = use_absolute_urls
         self.filters = filters
 
@@ -87,10 +87,10 @@ class Target(object):
         :return: results list
         """
         # Get results
-        if self.type.casefold() == 'links':
+        if self.links:
             # Get only links from the page
             items = self.get_links()
-        elif self.type.casefold() == 'text':
+        else:
             # Filter empty lines and remove leading spaces
             items = filter(len,
                            map(str.strip,
@@ -98,9 +98,6 @@ class Target(object):
                                .decode('utf-8')
                                .replace('\r', '')
                                .split('\n')))
-        else:
-            # Unexpected response type
-            items = []
         # Filter results
         results = []
         for item in items:

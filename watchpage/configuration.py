@@ -40,7 +40,7 @@ class Configuration(object):
                 name=name,
                 url=value['URL'],
                 parser=value['PARSER'],
-                type=value['TYPE'],
+                links=value['LINKS'],
                 use_absolute_urls=value.get('ABSOLUTE_URLS', False),
                 filters=value.get('FILTERS', []) or [])
 

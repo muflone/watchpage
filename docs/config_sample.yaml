@@ -1,7 +1,7 @@
 NAME: dbeaver
 URL: https://github.com/dbeaver/dbeaver/tags
 PARSER: html.parser
-TYPE: links
+LINKS: true
 ABSOLUTE_URLS: true
 FILTERS:
   - REGEX: https://
@@ -16,6 +16,6 @@ FILTERS:
 NAME: dbeaver_plugins
 URL: https://dbeaver.io/update/ce/latest/plugins/
 PARSER: html.parser
-TYPE: text
+LINKS: false
 FILTERS:
   - CONTAINS: .jar
