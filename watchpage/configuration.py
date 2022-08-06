@@ -39,8 +39,8 @@ class Configuration(object):
             self.targets[name] = Target(
                 name=name,
                 url=value['URL'],
-                parser=value['PARSER'],
-                links=value['LINKS'],
+                parser=value.get('PARSER', 'html.parser'),
+                links=value.get('LINKS', True),
                 use_absolute_urls=value.get('ABSOLUTE_URLS', False),
                 filters=value.get('FILTERS', []) or [])
 
