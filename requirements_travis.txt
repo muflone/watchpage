@@ -1,4 +1,4 @@
 -r requirements.txt
 
-flake8==5.0.0
+flake8==5.0.4
 build==0.8.0
