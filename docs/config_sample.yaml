@@ -1,0 +1,21 @@
+NAME: dbeaver
+URL: https://github.com/dbeaver/dbeaver/tags
+PARSER: html.parser
+TYPE: links
+ABSOLUTE_URLS: true
+FILTERS:
+  - REGEX: https://
+  - NOT REGEX: http://
+  - STARTS: https://
+  - NOT STARTS: http://
+  - CONTAINS: /refs/tags/
+  - NOT CONTAINS: /foo/
+  - ENDS: .tar.gz
+  - NOT ENDS: .zip
+---
+NAME: dbeaver_plugins
+URL: https://dbeaver.io/update/ce/latest/plugins/
+PARSER: html.parser
+TYPE: text
+FILTERS:
+  - CONTAINS: .jar
