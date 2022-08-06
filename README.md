@@ -27,3 +27,4 @@ sites and get any news based on patterns.
 * PyYAML 6.0 (https://pypi.org/project/PyYAML/)
 * BeautifulSoup4 4.x (https://pypi.org/project/beautifulsoup4/)
 * lxml 4.9 (https://pypi.org/project/lxml/)
+* html5lib 1.1 (https://pypi.org/project/html5lib/)
