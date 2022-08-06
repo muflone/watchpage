@@ -12,6 +12,7 @@ FILTERS:
   - NOT CONTAINS: /foo/
   - ENDS: .tar.gz
   - NOT ENDS: .zip
+STATUS: true
 ---
 NAME: dbeaver_plugins
 URL: https://dbeaver.io/update/ce/latest/plugins/
@@ -19,3 +20,4 @@ PARSER: html.parser
 LINKS: false
 FILTERS:
   - CONTAINS: .jar
+STATUS: false

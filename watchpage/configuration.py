@@ -36,13 +36,14 @@ class Configuration(object):
                                                 Loader=yaml.Loader)}
         # Load targets
         for name, value in values.items():
-            self.targets[name] = Target(
-                name=name,
-                url=value['URL'],
-                parser=value.get('PARSER', 'html.parser'),
-                links=value.get('LINKS', True),
-                use_absolute_urls=value.get('ABSOLUTE_URLS', False),
-                filters=value.get('FILTERS', []) or [])
+            if value.get('STATUS', True):
+                self.targets[name] = Target(
+                    name=name,
+                    url=value['URL'],
+                    parser=value.get('PARSER', 'html.parser'),
+                    links=value.get('LINKS', True),
+                    use_absolute_urls=value.get('ABSOLUTE_URLS', False),
+                    filters=value.get('FILTERS', []) or [])
 
     def get_targets(self) -> list[Target]:
         """
