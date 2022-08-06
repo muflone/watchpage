@@ -53,6 +53,10 @@ class CommandLineOptions(object):
                            required=True,
                            type=str,
                            help='configuration file')
+        group.add_argument('--results',
+                           required=True,
+                           type=str,
+                           help='directory to store the results')
 
     def parse_options(self) -> argparse.Namespace:
         """
