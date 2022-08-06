@@ -80,6 +80,27 @@ class Target(object):
                 results.append(url)
         return results
 
+    def get_rss_links(self) -> list[str]:
+        """
+        Get all the links from a RSS page
+
+        :return: list of URLs
+        """
+        parser = self.parse_url()
+        results = []
+        for anchor in parser.find_all('item'):
+            # Find only anchors with href
+            if anchor.link:
+                if self.use_absolute_urls:
+                    # Make URL absolute
+                    url = urllib.parse.urljoin(base=self.url,
+                                               url=anchor.link.text)
+                else:
+                    # Leave the URL as is
+                    url = anchor.link.text
+                results.append(url)
+        return results
+
     def get_results(self) -> list[str]:
         """
         Get the results from the downloaded page from the URL
@@ -98,6 +119,9 @@ class Target(object):
                                .decode('utf-8')
                                .replace('\r', '')
                                .split('\n')))
+        elif self.type.casefold() == 'rss':
+            # Get only links from a RSS feed
+            items = self.get_rss_links()
         else:
             # Unexpected response type
             items = []

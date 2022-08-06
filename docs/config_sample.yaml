@@ -21,3 +21,11 @@ TYPE: text
 FILTERS:
   - CONTAINS: .jar
 STATUS: false
+---
+NAME: gmtp
+URL: https://sourceforge.net/projects/gmtp/rss
+PARSER: xml
+TYPE: rss
+FILTERS:
+  - ENDS: .tar.gz/download
+STATUS: true
