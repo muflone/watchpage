@@ -58,6 +58,16 @@ FILTERS:
   - ENDS: .tar.gz
 STATUS: true
 ---
+NAME: gtransmemory
+URL: https://github.com/muflone/gtransmemory/tags
+PARSER: html.parser
+TYPE: links
+ABSOLUTE_URLS: true
+FILTERS:
+  - STARTS: https://github.com/muflone/gtransmemory/archive/refs/tags/
+  - ENDS: .tar.gz
+STATUS: true
+---
 NAME: gwakeonlan
 URL: https://github.com/muflone/gwakeonlan/tags
 PARSER: html.parser

@@ -1,3 +1,13 @@
+NAME: awaitable
+URL: https://github.com/muflone/awaitable/tags
+PARSER: html.parser
+TYPE: links
+ABSOLUTE_URLS: true
+FILTERS:
+  - STARTS: https://github.com/muflone/awaitable/archive/refs/tags/
+  - ENDS: .tar.gz
+STATUS: true
+---
 NAME: mumailer
 URL: https://github.com/muflone/mumailer/tags
 PARSER: html.parser
