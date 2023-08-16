@@ -38,13 +38,17 @@ class Configuration(object):
         # Load targets
         for name, value in values.items():
             if value.get('STATUS', True):
+                # Prepare headers
+                headers = value.get('HEADERS', {}) or {}
+                # Define targets
                 self.targets[name] = Target(
                     name=name,
                     url=value['URL'],
                     parser=value.get('PARSER', 'html.parser'),
                     type=value.get('TYPE', 'links'),
                     use_absolute_urls=value.get('ABSOLUTE_URLS', False),
-                    filters=value.get('FILTERS', []) or [])
+                    filters=value.get('FILTERS', []) or [],
+                    headers=headers)
 
     def get_targets(self) -> list[Target]:
         """

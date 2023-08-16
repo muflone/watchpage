@@ -32,13 +32,15 @@ class Target(object):
                  parser: str,
                  type: str,
                  use_absolute_urls: bool,
-                 filters: list):
+                 filters: list,
+                 headers: dict[str, str]):
         self.name = name
         self.url = url
         self.parser = parser
         self.type = type
         self.use_absolute_urls = use_absolute_urls
         self.filters = filters
+        self.headers = headers
 
     def open_url(self) -> bytes:
         """
@@ -46,8 +48,11 @@ class Target(object):
 
         :return: downloaded content from the URL
         """
-        with urllib.request.urlopen(url=self.url) as request:
-            return request.read()
+        request = urllib.request.Request(url=self.url)
+        for header, value in self.headers.items():
+            request.add_header(key=header, val=value)
+        with urllib.request.urlopen(url=request) as response:
+            return response.read()
 
     def parse_url(self) -> BeautifulSoup:
         """

@@ -89,6 +89,7 @@ A configuration file is a YAML specification file with the following values:
   - `NOT CONTAINS`: the item must not contain the specified string
   - `REGEX`: the item must match the specified regular expression string
   - `NOT REGEX`: the item must not match the specified regular expression string
+- `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
 
 # Configuration example files
@@ -109,6 +110,24 @@ STATUS: true
 
 This configuration file will use the html5 parser to scan all the links in the
 page that begin with https://github.com/muflone/ and ending with .tar.gz
+
+---
+```yaml
+NAME: watchpage
+URL: https://github.com/muflone/watchpage/tags
+PARSER: html5
+TYPE: links
+ABSOLUTE_URLS: true
+FILTERS:
+  - STARTS: https://github.com/muflone/
+  - ENDS: .tar.gz
+HEADERS:
+  User-Agent: WatchPage
+  Foo: Bar
+STATUS: true
+```
+
+Custom headers can be specified for each request.
 
 ---
 ```yaml

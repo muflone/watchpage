@@ -6,6 +6,8 @@ ABSOLUTE_URLS: true
 FILTERS:
   - STARTS: https://github.com/muflone/gnome-appfolders-manager/archive/refs/tags/
   - ENDS: .tar.gz
+HEADERS:
+  User-Agent: WatchPage
 STATUS: true
 ---
 NAME: dbeaver_plugins
