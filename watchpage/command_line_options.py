@@ -62,6 +62,11 @@ class CommandLineOptions(object):
                            action='store_true',
                            default=False,
                            help='dump results and discard changes')
+        group.add_argument('--agent',
+                           required=False,
+                           type=str,
+                           default=f'{APP_NAME} v{APP_VERSION}',
+                           help='default user agent')
 
     def parse_options(self) -> argparse.Namespace:
         """

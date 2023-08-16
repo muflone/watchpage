@@ -27,7 +27,7 @@ class Configuration(object):
     """
     Configuration object for loading the settings from a YAML file
     """
-    def __init__(self, filename: str):
+    def __init__(self, filename: str, default_agent: str):
         self.filename = filename
         self.targets = {}
         with open(self.filename, 'r') as file:
@@ -40,6 +40,10 @@ class Configuration(object):
             if value.get('STATUS', True):
                 # Prepare headers
                 headers = value.get('HEADERS', {}) or {}
+                # Add user-agent if it's missing
+                if ('User-Agent'.casefold() not in map(str.casefold, headers)
+                        and default_agent):
+                    headers['User-Agent'] = default_agent
                 # Define targets
                 self.targets[name] = Target(
                     name=name,

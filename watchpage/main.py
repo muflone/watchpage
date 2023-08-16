@@ -34,7 +34,8 @@ def main():
     if not results_dir.exists():
         # Create results directory
         results_dir.mkdir(parents=True)
-    configuration = Configuration(options.config)
+    configuration = Configuration(filename=options.config,
+                                  default_agent=options.agent)
     for target in configuration.get_targets():
         # Get results
         new_results = target.get_results()

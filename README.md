@@ -34,7 +34,7 @@ sites and get any news based on patterns.
 
 WatchPage is a command line utility and it requires some arguments to be passed:
 
-`watchpage --config <CONFIGURATION> --results <RESULTS> [--dump]`
+`watchpage --config <CONFIGURATION> --results <RESULTS> [--dump] [--agent <USER AGENT>]`
 
 The argument `--config` refers to a valid YAML configuration file
 (see below for some examples).
@@ -44,6 +44,10 @@ results files.
 
 The argument `--dump` will show the results but it will discard the changes, so
 they will not be saved in the directory specified in the `--results` argument.
+
+The argument `--agent` will be used as default User-Agent for the HTTP/HTTPS 
+requests. If not specified it will use the default WatchPage user agent.
+You can also pass `""` to omit the default user agent.
 
 An example to execute WatchPage will be the following:
 
