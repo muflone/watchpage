@@ -7,7 +7,7 @@
 
 **Description:** Watch webpages for changes
 
-**Copyright:** 2022 Fabio Castelli (Muflone) <muflone@muflone.com>
+**Copyright:** 2022-2023 Fabio Castelli (Muflone) <muflone@muflone.com>
 
 **License:** GPL-3+
 
