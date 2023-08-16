@@ -19,7 +19,7 @@
 ##
 
 APP_NAME = 'WatchPage'
-APP_VERSION = '0.2.0'
+APP_VERSION = '0.3.0'
 APP_DESCRIPTION = 'Watch webpages for changes'
 APP_DOMAIN = 'watchpage'
 APP_ID = f'{APP_DOMAIN}.muflone.com'
