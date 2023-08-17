@@ -18,6 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
+import json
 import re
 import urllib.parse
 import urllib.request
@@ -249,6 +250,10 @@ class Target(object):
                     filter_value = filter_type['REGEX_SEARCH']
                     item = re.search(pattern=filter_value,
                                      string=item)[0]
+                elif 'JSON_DICT_VALUE' in filter_type:
+                    # Get a value from a JSON dictionary
+                    filter_value = filter_type['JSON_DICT_VALUE']
+                    item = json.dumps(json.loads(item)[filter_value])
                 else:
                     # Invalid filter
                     valid = False
