@@ -104,6 +104,8 @@ A configuration file is a YAML specification file with the following values:
   - `REMOVE`: remove from the item the specified text
   - `REPLACE`: replace from the item the specified text with a new pattern
     (specified using `WITH:`)
+  - `REGEX_REPLACE`: replace from the item a pattern using a regular expression
+    with a new pattern (specified using `WITH:`)
   - `REGEX_SEARCH`: return the first regular expression match
 - `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
