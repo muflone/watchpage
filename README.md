@@ -84,6 +84,10 @@ A configuration file is a YAML specification file with the following values:
   - `rss`: will get all the link items from a RSS feed
   - `text`: will process the page as a simple text file
   - `github-tags`: will get all the tag anchors from a GitHub repository
+  - `github-tags-zip`: will get all the tag anchors from a GitHub repository,
+    filtering only those in `.zip` format
+  - `github-tags-tgz`: will get all the tag anchors from a GitHub repository,
+    filtering only those in `.tar.gz` format
 - `ABSOLUTE_URLS`: a boolean value (true/false) to make the processed URLs as
   absolute by appending the website from the URL page
 - `FILTERS`: a list of filters to apply to find the matched items. This can be

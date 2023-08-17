@@ -40,7 +40,9 @@ class Target(object):
         if url.startswith('github:'):
             # Handle special url with github: prefix
             url = f'https://github.com/{url[7:]}'
-            if type.casefold() == 'github-tags':
+            if type.casefold() in ('github-tags',
+                                   'github-tags-tgz',
+                                   'github-tags-zip'):
                 url = f'{url}/tags'
         self.url = url
         self.parser = parser
@@ -83,7 +85,19 @@ class Target(object):
             filter_url = f'/{self.initial_url[7:]}/archive/refs/tags/'
             if self.use_absolute_urls:
                 filter_url = f'https://github.com{filter_url}'
+            matching_url = False
             if url.startswith(filter_url):
+                matching_url = True
+                if (self.type.casefold() == 'github-tags-zip' and
+                        not url.endswith('.zip')):
+                    # Exclude urls not in zip format
+                    matching_url = False
+                elif (self.type.casefold() == 'github-tags-tgz' and
+                      not url.endswith('.tar.gz')):
+                    # Exclude urls not in tar.gz format
+                    matching_url = False
+            # Include only matching URLs
+            if matching_url:
                 results.append(url)
         return results
 
@@ -151,7 +165,9 @@ class Target(object):
         elif self.type.casefold() == 'rss':
             # Get only links from a RSS feed
             items = self.get_rss_links()
-        elif self.type.casefold() == 'github-tags':
+        elif self.type.casefold() in ('github-tags',
+                                      'github-tags-tgz',
+                                      'github-tags-zip'):
             # Get only GitHub tags links
             items = self.get_github_tags()
         else:
