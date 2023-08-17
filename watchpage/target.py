@@ -86,7 +86,8 @@ class Target(object):
                 else:
                     # Leave the URL as is
                     url = anchor['href']
-                results.append(url)
+                if url:
+                    results.append(url)
         return results
 
     def get_rss_links(self) -> list[str]:
