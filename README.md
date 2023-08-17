@@ -111,6 +111,8 @@ A configuration file is a YAML specification file with the following values:
     with a new pattern (specified using `WITH:`)
   - `REGEX_SEARCH`: return the first regular expression match
   - `JSON_DICT_VALUE`: return the value from a JSON dict with the specified key
+  - `JSON_LIST_VALUE`: return the value from a JSON list with the specified
+    index
 - `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
 
