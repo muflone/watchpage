@@ -278,9 +278,9 @@ class Target(object):
                     # Get a value from a JSON dictionary
                     filter_value = filter_type['JSON DICT']
                     item = json.dumps(json.loads(item)[filter_value])
-                elif 'JSON_LIST_VALUE' in filter_type:
+                elif 'JSON LIST' in filter_type:
                     # Get a value from a JSON list
-                    filter_value = filter_type['JSON_LIST_VALUE']
+                    filter_value = filter_type['JSON LIST']
                     item = json.dumps(json.loads(item)[filter_value])
                 else:
                     # Invalid filter
