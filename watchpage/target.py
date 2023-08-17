@@ -35,6 +35,10 @@ class Target(object):
                  filters: list,
                  headers: dict[str, str]):
         self.name = name
+        self.initial_url = url
+        if url.startswith('github:'):
+            # Handle special url with github: prefix
+            url = f'https://github.com/{url[7:]}'
         self.url = url
         self.parser = parser
         self.type = type

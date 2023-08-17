@@ -71,6 +71,8 @@ A configuration file is a YAML specification file with the following values:
 
 - `NAME`: a unique string to identify the target to process
 - `URL`: the page URL to monitor for changes
+
+  You can also specify `github:name/repository` to point to a GitHub repository
 - `PARSER`: the parser to use to process the URL. This can be either:
   - `html.parser`: this will use the default Python HTML parser
   - `html5lib`: this will use [html5lib](https://pypi.org/project/html5lib/) to

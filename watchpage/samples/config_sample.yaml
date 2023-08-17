@@ -1,3 +1,13 @@
+NAME: watchpage
+URL: github:muflone/watchpage
+PARSER: html5lib
+TYPE: links
+ABSOLUTE_URLS: true
+FILTERS:
+  - STARTS: https://github.com/muflone/watchpage/archive/refs/tags/
+  - ENDS: .tar.gz
+STATUS: true
+---
 NAME: gnome-appfolders-manager
 URL: https://github.com/muflone/gnome-appfolders-manager/tags
 PARSER: html5lib
