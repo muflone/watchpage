@@ -274,9 +274,9 @@ class Target(object):
                     filter_value = filter_type['REGEX SEARCH']
                     item = re.search(pattern=filter_value,
                                      string=item)[0]
-                elif 'JSON_DICT_VALUE' in filter_type:
+                elif 'JSON DICT' in filter_type:
                     # Get a value from a JSON dictionary
-                    filter_value = filter_type['JSON_DICT_VALUE']
+                    filter_value = filter_type['JSON DICT']
                     item = json.dumps(json.loads(item)[filter_value])
                 elif 'JSON_LIST_VALUE' in filter_type:
                     # Get a value from a JSON list
