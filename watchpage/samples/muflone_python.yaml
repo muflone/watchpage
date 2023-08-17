@@ -1,70 +1,56 @@
 NAME: awaitable
-URL: https://github.com/muflone/awaitable/tags
+URL: github:muflone/awaitable
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: https://github.com/muflone/awaitable/archive/refs/tags/
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: mumailer
-URL: https://github.com/muflone/mumailer/tags
+URL: github:muflone/mumailer
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: https://github.com/muflone/mumailer/archive/refs/tags/
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
-NAME: pymagento-rest
-URL: https://github.com/muflone/pymagento-rest/tags
+NAME: pixelcolor
+URL: github:muflone/pixelcolor
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: https://github.com/muflone/pymagento-rest/archive/refs/tags/
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pykerio
-URL: https://github.com/muflone/pykerio/tags
+URL: github:muflone/pykerio
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: https://github.com/muflone/pykerio/archive/refs/tags/
-  - ENDS: '.tar.gz'
+STATUS: true
+---
+NAME: pymagento-rest
+URL: github:muflone/pymagento-rest
+PARSER: html.parser
+TYPE: github-tags-tgz
+ABSOLUTE_URLS: true
 STATUS: true
 ---
 NAME: pyodoo
-URL: https://github.com/muflone/pyodoo/tags
+URL: github:muflone/pyodoo
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/pyodoo/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pyzendesk
-URL: https://github.com/muflone/pyzendesk/tags
+URL: github:muflone/pyzendesk
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/pyzendesk/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: watchpage
-URL: https://github.com/muflone/watchpage/tags
+URL: github:muflone/watchpage
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/watchpage/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---

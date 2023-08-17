@@ -1,11 +1,8 @@
 NAME: dbeaver
-URL: https://github.com/dbeaver/dbeaver/tags
+URL: github:dbeaver/dbeaver
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/dbeaver/dbeaver/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: dbeaver-plugin-apache-poi

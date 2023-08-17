@@ -1,70 +1,70 @@
-NAME: remmina-plugin-folder
-URL: https://github.com/muflone/remmina-plugin-folder/tags
+NAME: remmina-plugin-builder
+URL: github:muflone/remmina-plugin-builder
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-folder/archive/refs/tags/'
-  - ENDS: '.tar.gz'
+STATUS: true
+---
+NAME: remmina-plugin-exec
+URL: github:muflone/remmina-plugin-exec
+PARSER: html.parser
+TYPE: github-tags-tgz
+ABSOLUTE_URLS: true
+STATUS: true
+---
+NAME: remmina-plugin-folder
+URL: github:muflone/remmina-plugin-folder
+PARSER: html.parser
+TYPE: github-tags-tgz
+ABSOLUTE_URLS: true
 STATUS: true
 ---
 NAME: remmina-plugin-open
-URL: https://github.com/muflone/remmina-plugin-open/tags
+URL: github:muflone/remmina-plugin-open
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-open/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: remmina-plugin-rdesktop
-URL: https://github.com/muflone/remmina-plugin-rdesktop/tags
+URL: github:muflone/remmina-plugin-rdesktop
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-rdesktop/archive/refs/tags/'
-  - ENDS: '.tar.gz'
+STATUS: true
+---
+NAME: remmina-plugin-rustdesk
+URL: github:muflone/remmina-plugin-rustdesk
+PARSER: html.parser
+TYPE: github-tags-tgz
+ABSOLUTE_URLS: true
 STATUS: true
 ---
 NAME: remmina-plugin-teamviewer
-URL: https://github.com/muflone/remmina-plugin-teamviewer/tags
+URL: github:muflone/remmina-plugin-teamviewer
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-teamviewer/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: remmina-plugin-ultravnc
-URL: https://github.com/muflone/remmina-plugin-ultravnc/tags
+URL: github:muflone/remmina-plugin-ultravnc
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-ultravnc/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: remmina-plugin-url
-URL: https://github.com/muflone/remmina-plugin-url/tags
+URL: github:muflone/remmina-plugin-url
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-url/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: remmina-plugin-webkit
-URL: https://github.com/muflone/remmina-plugin-webkit/tags
+URL: github:muflone/remmina-plugin-webkit
 PARSER: html.parser
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/remmina-plugin-webkit/archive/refs/tags/'
-  - ENDS: '.tar.gz'
 STATUS: true
 ---

@@ -1,20 +1,15 @@
 NAME: watchpage
 URL: github:muflone/watchpage
 PARSER: html5lib
-TYPE: github-tags
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gnome-appfolders-manager
-URL: https://github.com/muflone/gnome-appfolders-manager/tags
+URL: github:muflone/gnome-appfolders-manager
 PARSER: html5lib
-TYPE: links
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - STARTS: 'https://github.com/muflone/gnome-appfolders-manager/archive/refs/tags/'
-  - ENDS: ''.tar.gz'
 HEADERS:
   User-Agent: 'WatchPage'
 STATUS: true
@@ -22,16 +17,20 @@ STATUS: true
 NAME: dbeaver_plugins
 URL: https://dbeaver.io/update/ce/latest/plugins/
 PARSER: html.parser
-TYPE: text
+TYPE: links
+ABSOLUTE_URLS: true
 FILTERS:
   - CONTAINS: '.jar'
-STATUS: false
+STATUS: true
 ---
 NAME: gmtp
 URL: https://sourceforge.net/projects/gmtp/rss
 PARSER: xml
 TYPE: rss
+ABSOLUTE_URLS: false
 FILTERS:
   - ENDS: '.tar.gz/download'
+  - REGEX REPLACE: '/download$'
+    WITH: ''
 STATUS: true
 ---

@@ -145,10 +145,8 @@ the page that begin with https://github.com/muflone/ and ending with .tar.gz
 NAME: watchpage
 URL: github:muflone/watchpage
 PARSER: html5lib
-TYPE: github-tags
+TYPE: github-tags-tgz
 ABSOLUTE_URLS: true
-FILTERS:
-  - ENDS: '.tar.gz'
 STATUS: true
 ```
 
