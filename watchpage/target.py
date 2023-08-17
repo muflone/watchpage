@@ -262,9 +262,9 @@ class Target(object):
                     filter_value = filter_type['REPLACE']
                     filter_value_2 = filter_type['WITH']
                     item = item.replace(filter_value, filter_value_2)
-                elif 'REGEX_REPLACE' in filter_type:
+                elif 'REGEX REPLACE' in filter_type:
                     # Replace a regular expression pattern
-                    filter_value = filter_type['REGEX_REPLACE']
+                    filter_value = filter_type['REGEX REPLACE']
                     filter_value_2 = filter_type['WITH']
                     item = re.sub(pattern=filter_value,
                                   repl=filter_value_2,
