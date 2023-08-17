@@ -228,6 +228,11 @@ class Target(object):
                     filter_value = filter_type['REPLACE']
                     filter_value_2 = filter_type['WITH']
                     item = item.replace(filter_value, filter_value_2)
+                elif 'REGEX_SEARCH' in filter_type:
+                    # Return the first regular expression match
+                    filter_value = filter_type['REGEX_SEARCH']
+                    item = re.search(pattern=filter_value,
+                                     string=item)[0]
                 else:
                     # Invalid filter
                     valid = False
