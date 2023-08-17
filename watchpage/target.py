@@ -221,6 +221,11 @@ class Target(object):
                     # Remove matching
                     filter_value = filter_type['REMOVE']
                     item = item.replace(filter_value, '')
+                elif 'REPLACE' in filter_type:
+                    # Replace pattern
+                    filter_value = filter_type['REPLACE']
+                    filter_value_2 = filter_type['WITH']
+                    item = item.replace(filter_value, filter_value_2)
                 else:
                     # Invalid filter
                     valid = False

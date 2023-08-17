@@ -102,6 +102,8 @@ A configuration file is a YAML specification file with the following values:
   - `PREPEND`: prepend (insert at the start) the specified text
   - `APPEND`: append (insert at the end) the specified text
   - `REMOVE`: remove from the item the specified text
+  - `REPLACE`: replace from the item the specified text with a new pattern
+    (specified using `WITH:`)
 - `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
 
@@ -138,6 +140,26 @@ STATUS: true
 
 This configuration file will use the html5lib parser to scan all the tags links
 for the GitHub repository only extracting the tags ending with .tar.gz
+
+---
+```yaml
+NAME: watchpage
+URL: github:muflone/watchpage
+PARSER: html5lib
+TYPE: github-tags
+ABSOLUTE_URLS: true
+FILTERS:
+  - ENDS: '.tar.gz'
+  - RTRIM: '.tar.gz'
+  - APPEND: '.something'
+  - REPLACE: '.something'
+    WITH: '.different'
+STATUS: true
+```
+
+This configuration file will use the html5lib parser to scan all the tags links
+for the GitHub repository only extracting the tags ending with .tar.gz and
+applies some text replacements.
 
 ---
 ```yaml
