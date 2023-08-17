@@ -233,6 +233,14 @@ class Target(object):
                 elif 'LOWER' in filter_type:
                     # Make the text lowercase
                     item = item.lower()
+                elif 'LEFT' in filter_type:
+                    # Leftmost characters
+                    filter_value = filter_type['LEFT']
+                    item = item[:filter_value]
+                elif 'RIGHT' in filter_type:
+                    # Rightmost characters
+                    filter_value = filter_type['RIGHT']
+                    item = item[-filter_value:]
                 elif 'REPLACE' in filter_type:
                     # Replace pattern
                     filter_value = filter_type['REPLACE']

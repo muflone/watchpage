@@ -107,6 +107,8 @@ A configuration file is a YAML specification file with the following values:
   - `REVERSE`: reverse the item text
   - `UPPER`: makes the text uppercase
   - `LOWER`: makes the text lowercase
+  - `LEFT`: return the first leftmost characters
+  - `RIGHT`: return the first rightmost characters
   - `REGEX_REPLACE`: replace from the item a pattern using a regular expression
     with a new pattern (specified using `WITH:`)
   - `REGEX_SEARCH`: return the first regular expression match
