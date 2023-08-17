@@ -104,6 +104,7 @@ A configuration file is a YAML specification file with the following values:
   - `REMOVE`: remove from the item the specified text
   - `REPLACE`: replace from the item the specified text with a new pattern
     (specified using `WITH:`)
+  - `REVERSE`: reverse the item text
   - `REGEX_REPLACE`: replace from the item a pattern using a regular expression
     with a new pattern (specified using `WITH:`)
   - `REGEX_SEARCH`: return the first regular expression match

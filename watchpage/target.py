@@ -223,6 +223,9 @@ class Target(object):
                     # Remove matching
                     filter_value = filter_type['REMOVE']
                     item = item.replace(filter_value, '')
+                elif 'REVERSE' in filter_type:
+                    # Reverse the text
+                    item = item[::-1]
                 elif 'REPLACE' in filter_type:
                     # Replace pattern
                     filter_value = filter_type['REPLACE']
