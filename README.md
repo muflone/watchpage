@@ -104,8 +104,8 @@ A configuration file is a YAML specification file with the following values:
 Some configuration example files can be found in the `docs` directory.
 
 ```yaml
-NAME: gnome-appfolders-manager
-URL: https://github.com/muflone/gnome-appfolders-manager/tags
+NAME: watchpage
+URL: https://github.com/muflone/watchpage/tags
 PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
