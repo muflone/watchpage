@@ -83,6 +83,7 @@ A configuration file is a YAML specification file with the following values:
   - `links`: will get all the anchors from a HTML page
   - `rss`: will get all the link items from a RSS feed
   - `text`: will process the page as a simple text file
+  - `github-tags`: will get all the tag anchors from a GitHub repository
 - `ABSOLUTE_URLS`: a boolean value (true/false) to make the processed URLs as
   absolute by appending the website from the URL page
 - `FILTERS`: a list of filters to apply to find the matched items. This can be
@@ -116,6 +117,21 @@ STATUS: true
 
 This configuration file will use the html5lib parser to scan all the links in
 the page that begin with https://github.com/muflone/ and ending with .tar.gz
+
+---
+```yaml
+NAME: watchpage
+URL: github:muflone/watchpage
+PARSER: html5lib
+TYPE: github-tags
+ABSOLUTE_URLS: true
+FILTERS:
+  - ENDS: .tar.gz
+STATUS: true
+```
+
+This configuration file will use the html5lib parser to scan all the tags links
+for the GitHub repository only extracting the tags ending with .tar.gz
 
 ---
 ```yaml

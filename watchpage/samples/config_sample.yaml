@@ -1,10 +1,9 @@
 NAME: watchpage
 URL: github:muflone/watchpage
 PARSER: html5lib
-TYPE: links
+TYPE: github-tags
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/watchpage/archive/refs/tags/
   - ENDS: .tar.gz
 STATUS: true
 ---

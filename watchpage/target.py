@@ -39,6 +39,8 @@ class Target(object):
         if url.startswith('github:'):
             # Handle special url with github: prefix
             url = f'https://github.com/{url[7:]}'
+            if type.casefold() == 'github-tags':
+                url = f'{url}/tags'
         self.url = url
         self.parser = parser
         self.type = type
@@ -67,6 +69,22 @@ class Target(object):
         soup = BeautifulSoup(markup=self.open_url(),
                              features=self.parser)
         return soup
+
+    def get_github_tags(self) -> list[str]:
+        """
+        Get all the GitHub tags in the page
+
+        :return: list of URLs
+        """
+        results = []
+        for url in self.get_links():
+            # Find only tags urls
+            filter_url = f'/{self.initial_url[7:]}/archive/refs/tags/'
+            if self.use_absolute_urls:
+                filter_url = f'https://github.com{filter_url}'
+            if url.startswith(filter_url):
+                results.append(url)
+        return results
 
     def get_links(self) -> list[str]:
         """
@@ -132,6 +150,9 @@ class Target(object):
         elif self.type.casefold() == 'rss':
             # Get only links from a RSS feed
             items = self.get_rss_links()
+        elif self.type.casefold() == 'github-tags':
+            # Get only GitHub tags links
+            items = self.get_github_tags()
         else:
             # Unexpected response type
             items = []
