@@ -96,6 +96,9 @@ A configuration file is a YAML specification file with the following values:
   - `NOT CONTAINS`: the item must not contain the specified string
   - `REGEX`: the item must match the specified regular expression string
   - `NOT REGEX`: the item must not match the specified regular expression string
+  - `TRIM`: removes spaces or the specified pattern from both left and right
+  - `LTRIM`: removes spaces or the specified pattern from the left
+  - `RTRIM`: removes spaces or the specified pattern from the right
 - `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
 

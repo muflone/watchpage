@@ -197,6 +197,18 @@ class Target(object):
                     # Link doesn't match the pattern
                     filter_value = filter_type['NOT REGEX']
                     valid = not bool(re.search(filter_value, item))
+                elif 'TRIM' in filter_type:
+                    # Trim characters on the left and right side
+                    filter_value = filter_type['TRIM']
+                    item = item.strip(filter_value)
+                elif 'LTRIM' in filter_type:
+                    # Trim characters on the left side
+                    filter_value = filter_type['LTRIM']
+                    item = item.lstrip(filter_value)
+                elif 'RTRIM' in filter_type:
+                    # Trim characters on the right side
+                    filter_value = filter_type['RTRIM']
+                    item = item.rstrip(filter_value)
                 else:
                     # Invalid filter
                     valid = False
