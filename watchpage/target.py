@@ -192,11 +192,13 @@ class Target(object):
                 elif 'REGEX' in filter_type:
                     # Link matches the pattern
                     filter_value = filter_type['REGEX']
-                    valid = bool(re.search(filter_value, item))
+                    valid = bool(re.search(pattern=filter_value,
+                                           string=item))
                 elif 'NOT REGEX' in filter_type:
                     # Link doesn't match the pattern
                     filter_value = filter_type['NOT REGEX']
-                    valid = not bool(re.search(filter_value, item))
+                    valid = not bool(re.search(pattern=filter_value,
+                                               string=item))
                 elif 'TRIM' in filter_type:
                     # Trim characters on the left and right side
                     filter_value = filter_type['TRIM']
