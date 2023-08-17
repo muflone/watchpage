@@ -99,6 +99,8 @@ A configuration file is a YAML specification file with the following values:
   - `TRIM`: removes spaces or the specified pattern from both left and right
   - `LTRIM`: removes spaces or the specified pattern from the left
   - `RTRIM`: removes spaces or the specified pattern from the right
+  - `PREPEND`: prepend (insert at the start) the specified text
+  - `APPEND`: append (insert at the end) the specified text
 - `HEADERS`: a dictionary with the headers to set for the request
 - `STATUS`: a boolean value (true/false) to enable or disable the target
 

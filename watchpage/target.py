@@ -209,6 +209,14 @@ class Target(object):
                     # Trim characters on the right side
                     filter_value = filter_type['RTRIM']
                     item = item.rstrip(filter_value)
+                elif 'PREPEND' in filter_type:
+                    # Prepend text
+                    filter_value = filter_type['PREPEND']
+                    item = f'{filter_value}{item}'
+                elif 'APPEND' in filter_type:
+                    # Append text
+                    filter_value = filter_type['APPEND']
+                    item = f'{item}{filter_value}'
                 else:
                     # Invalid filter
                     valid = False
