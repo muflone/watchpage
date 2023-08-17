@@ -217,6 +217,10 @@ class Target(object):
                     # Append text
                     filter_value = filter_type['APPEND']
                     item = f'{item}{filter_value}'
+                elif 'REMOVE' in filter_type:
+                    # Remove matching
+                    filter_value = filter_type['REMOVE']
+                    item = item.replace(filter_value, '')
                 else:
                     # Invalid filter
                     valid = False
