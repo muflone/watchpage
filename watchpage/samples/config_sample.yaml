@@ -1,6 +1,6 @@
 NAME: gnome-appfolders-manager
 URL: https://github.com/muflone/gnome-appfolders-manager/tags
-PARSER: html5
+PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:

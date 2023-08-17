@@ -73,7 +73,7 @@ A configuration file is a YAML specification file with the following values:
 - `URL`: the page URL to monitor for changes
 - `PARSER`: the parser to use to process the URL. This can be either:
   - `html.parser`: this will use the default Python HTML parser
-  - `html5`: this will use [html5lib](https://pypi.org/project/html5lib/) to
+  - `html5lib`: this will use [html5lib](https://pypi.org/project/html5lib/) to
     process the page
   - `lxml`: this will use [lxml](https://lxml.de/) HTML parser
   - `xml`: this will use [lxml](https://lxml.de/) XML parser
@@ -103,7 +103,7 @@ Some configuration example files can be found in the `docs` directory.
 ```yaml
 NAME: gnome-appfolders-manager
 URL: https://github.com/muflone/gnome-appfolders-manager/tags
-PARSER: html5
+PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
@@ -112,14 +112,14 @@ FILTERS:
 STATUS: true
 ```
 
-This configuration file will use the html5 parser to scan all the links in the
-page that begin with https://github.com/muflone/ and ending with .tar.gz
+This configuration file will use the html5lib parser to scan all the links in
+the page that begin with https://github.com/muflone/ and ending with .tar.gz
 
 ---
 ```yaml
 NAME: watchpage
 URL: https://github.com/muflone/watchpage/tags
-PARSER: html5
+PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
