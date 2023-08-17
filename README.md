@@ -115,7 +115,7 @@ A configuration file is a YAML specification file with the following values:
   - `RIGHT`: return the first rightmost characters
   - `REGEX REPLACE`: replace from the item a pattern using a regular expression
     with a new pattern (specified using `WITH:`)
-  - `REGEX_SEARCH`: return the first regular expression match
+  - `REGEX SEARCH`: return the first regular expression match
   - `JSON_DICT_VALUE`: return the value from a JSON dict with the specified key
   - `JSON_LIST_VALUE`: return the value from a JSON list with the specified
     index

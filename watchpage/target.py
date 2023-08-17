@@ -269,9 +269,9 @@ class Target(object):
                     item = re.sub(pattern=filter_value,
                                   repl=filter_value_2,
                                   string=item)
-                elif 'REGEX_SEARCH' in filter_type:
+                elif 'REGEX SEARCH' in filter_type:
                     # Return the first regular expression match
-                    filter_value = filter_type['REGEX_SEARCH']
+                    filter_value = filter_type['REGEX SEARCH']
                     item = re.search(pattern=filter_value,
                                      string=item)[0]
                 elif 'JSON_DICT_VALUE' in filter_type:
