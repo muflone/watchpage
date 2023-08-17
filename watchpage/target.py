@@ -226,6 +226,12 @@ class Target(object):
                 elif 'REVERSE' in filter_type:
                     # Reverse the text
                     item = item[::-1]
+                elif 'UPPER' in filter_type:
+                    # Make the text uppercase
+                    item = item.upper()
+                elif 'LOWER' in filter_type:
+                    # Make the text lowercase
+                    item = item.lower()
                 elif 'REPLACE' in filter_type:
                     # Replace pattern
                     filter_value = filter_type['REPLACE']
