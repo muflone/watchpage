@@ -4,8 +4,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/bluewho/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/bluewho/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: cpucompare
@@ -14,8 +14,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/cpucompare/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/cpucompare/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gespeaker
@@ -24,8 +24,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gespeaker/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gespeaker/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gextractwinicons
@@ -34,8 +34,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gextractwinicons/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gextractwinicons/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gnome-appfolders-manager
@@ -44,8 +44,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gnome-appfolders-manager/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gnome-appfolders-manager/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gptrace
@@ -54,8 +54,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gptrace/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gptrace/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gtransmemory
@@ -64,8 +64,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gtransmemory/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gtransmemory/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gwakeonlan
@@ -74,7 +74,7 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/gwakeonlan/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/gwakeonlan/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---

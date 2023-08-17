@@ -4,8 +4,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/dbeaver/dbeaver/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/dbeaver/dbeaver/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: gmtp
@@ -13,7 +13,7 @@ URL: https://sourceforge.net/projects/gmtp/rss
 PARSER: xml
 TYPE: rss
 FILTERS:
-  - ENDS: .tar.gz/download
+  - ENDS: '.tar.gz/download'
 STATUS: true
 ---
 NAME: gscan2pdf
@@ -21,7 +21,7 @@ URL: https://sourceforge.net/projects/gscan2pdf/rss
 PARSER: xml
 TYPE: rss
 FILTERS:
-  - ENDS: .tar.xz/download
+  - ENDS: '.tar.xz/download'
 STATUS: true
 ---
 NAME: pacmanlogviewer
@@ -30,8 +30,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/gcala/pacmanlogviewer/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/gcala/pacmanlogviewer/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: shutter
@@ -40,8 +40,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/shutter-project/shutter/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/shutter-project/shutter/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: sweethome3d
@@ -49,9 +49,9 @@ URL: https://sourceforge.net/projects/sweethome3d/rss
 PARSER: xml
 TYPE: rss
 FILTERS:
-  - STARTS: https://sourceforge.net/projects/sweethome3d/files/SweetHome3D-source/
-  - REGEX: files/SweetHome3D-source/SweetHome3D-(.*)-src/SweetHome3D-(.*)-src.zip/download
-  - ENDS: -src.zip/download
+  - STARTS: 'https://sourceforge.net/projects/sweethome3d/files/SweetHome3D-source/'
+  - REGEX: 'files/SweetHome3D-source/SweetHome3D-(.*)-src/SweetHome3D-(.*)-src.zip/download'
+  - ENDS: '-src.zip/download'
 STATUS: true
 ---
 NAME: xca
@@ -60,7 +60,7 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/chris2511/xca/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/chris2511/xca/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---

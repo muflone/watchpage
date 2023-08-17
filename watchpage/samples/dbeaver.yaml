@@ -4,8 +4,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/dbeaver/dbeaver/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/dbeaver/dbeaver/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: dbeaver-plugin-apache-poi
@@ -14,8 +14,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - CONTAINS: org.jkiss.bundle.apache.poi_
-  - ENDS: .jar
+  - CONTAINS: 'org.jkiss.bundle.apache.poi_'
+  - ENDS: '.jar'
 STATUS: true
 ---
 NAME: dbeaver-plugin-batik
@@ -24,8 +24,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - CONTAINS: org.jkiss.bundle.apache.batik_
-  - ENDS: .jar
+  - CONTAINS: 'org.jkiss.bundle.apache.batik_'
+  - ENDS: '.jar'
 STATUS: true
 ---
 NAME: dbeaver-plugin-office
@@ -34,8 +34,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - CONTAINS: org.jkiss.dbeaver.data.office_
-  - ENDS: .jar
+  - CONTAINS: 'org.jkiss.dbeaver.data.office_'
+  - ENDS: '.jar'
 STATUS: true
 ---
 NAME: dbeaver-plugin-svg-format
@@ -44,8 +44,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - CONTAINS: org.jkiss.dbeaver.ext.ui.svg_
-  - ENDS: .jar
+  - CONTAINS: 'org.jkiss.dbeaver.ext.ui.svg_'
+  - ENDS: '.jar'
 STATUS: true
 ---
 NAME: dbeaver_plugins
@@ -53,6 +53,6 @@ URL: https://dbeaver.io/update/ce/latest/plugins/
 PARSER: html.parser
 TYPE: text
 FILTERS:
-  - CONTAINS: .jar
+  - CONTAINS: '.jar'
 STATUS: false
 ---

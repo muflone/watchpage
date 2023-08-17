@@ -118,8 +118,8 @@ PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ```
 
@@ -134,7 +134,7 @@ PARSER: html5lib
 TYPE: github-tags
 ABSOLUTE_URLS: true
 FILTERS:
-  - ENDS: .tar.gz
+  - ENDS: '.tar.gz'
 STATUS: true
 ```
 
@@ -169,11 +169,11 @@ PARSER: html5lib
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/'
+  - ENDS: '.tar.gz'
 HEADERS:
-  User-Agent: WatchPage
-  Foo: Bar
+  User-Agent: 'WatchPage'
+  Foo: 'Bar'
 STATUS: true
 ```
 
@@ -186,7 +186,7 @@ URL: https://dbeaver.io/update/ce/latest/plugins/
 PARSER: html.parser
 TYPE: text
 FILTERS:
-  - CONTAINS: .jar
+  - CONTAINS: '.jar'
 STATUS: false
 ```
 
@@ -200,7 +200,7 @@ URL: https://sourceforge.net/projects/gmtp/rss
 PARSER: xml
 TYPE: rss
 FILTERS:
-  - ENDS: .tar.gz/download
+  - ENDS: '.tar.gz/download'
 STATUS: true
 ```
 

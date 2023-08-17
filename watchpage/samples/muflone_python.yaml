@@ -5,7 +5,7 @@ TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
   - STARTS: https://github.com/muflone/awaitable/archive/refs/tags/
-  - ENDS: .tar.gz
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: mumailer
@@ -15,7 +15,7 @@ TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
   - STARTS: https://github.com/muflone/mumailer/archive/refs/tags/
-  - ENDS: .tar.gz
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pymagento-rest
@@ -25,7 +25,7 @@ TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
   - STARTS: https://github.com/muflone/pymagento-rest/archive/refs/tags/
-  - ENDS: .tar.gz
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pykerio
@@ -35,7 +35,7 @@ TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
   - STARTS: https://github.com/muflone/pykerio/archive/refs/tags/
-  - ENDS: .tar.gz
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pyodoo
@@ -44,8 +44,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/pyodoo/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/pyodoo/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: pyzendesk
@@ -54,8 +54,8 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/pyzendesk/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/pyzendesk/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
 NAME: watchpage
@@ -64,7 +64,7 @@ PARSER: html.parser
 TYPE: links
 ABSOLUTE_URLS: true
 FILTERS:
-  - STARTS: https://github.com/muflone/watchpage/archive/refs/tags/
-  - ENDS: .tar.gz
+  - STARTS: 'https://github.com/muflone/watchpage/archive/refs/tags/'
+  - ENDS: '.tar.gz'
 STATUS: true
 ---
