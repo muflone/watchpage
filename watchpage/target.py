@@ -240,6 +240,10 @@ class Target(object):
                     # Remove matching
                     filter_value = filter_type['REMOVE']
                     item = item.replace(filter_value, '')
+                elif 'REMOVE LEFT' in filter_type:
+                    # Remove matching string on the left side
+                    filter_value = filter_type['REMOVE LEFT']
+                    item = item.removeprefix(filter_value)
                 elif 'REVERSE' in filter_type:
                     # Reverse the text
                     item = item[::-1]
