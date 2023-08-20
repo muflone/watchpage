@@ -217,15 +217,15 @@ class Target(object):
                     valid = not bool(re.search(pattern=filter_value,
                                                string=item))
                 elif 'TRIM' in filter_type:
-                    # Trim characters on the left and right side
+                    # Remove characters on the left and right sides
                     filter_value = filter_type['TRIM']
                     item = item.strip(filter_value)
                 elif 'LTRIM' in filter_type:
-                    # Trim characters on the left side
+                    # Remove characters on the left side
                     filter_value = filter_type['LTRIM']
                     item = item.lstrip(filter_value)
                 elif 'RTRIM' in filter_type:
-                    # Trim characters on the right side
+                    # Remove characters on the right side
                     filter_value = filter_type['RTRIM']
                     item = item.rstrip(filter_value)
                 elif 'PREPEND' in filter_type:

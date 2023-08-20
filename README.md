@@ -100,9 +100,9 @@ A configuration file is a YAML specification file with the following values:
   - `NOT CONTAINS`: the item must not contain the specified string
   - `REGEX`: the item must match the specified regular expression string
   - `NOT REGEX`: the item must not match the specified regular expression string
-  - `TRIM`: removes spaces or the specified pattern from both left and right
-  - `LTRIM`: removes spaces or the specified pattern from the left
-  - `RTRIM`: removes spaces or the specified pattern from the right
+  - `TRIM`: removes spaces or the specified characters from both left and right
+  - `LTRIM`: removes spaces or the specified characters from the left
+  - `RTRIM`: removes spaces or the specified characters from the right
   - `PREPEND`: prepend (insert at the start) the specified text
   - `APPEND`: append (insert at the end) the specified text
   - `REMOVE`: remove from the item the specified text
