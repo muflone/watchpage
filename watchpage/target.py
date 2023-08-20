@@ -244,6 +244,10 @@ class Target(object):
                     # Remove matching string on the left side
                     filter_value = filter_type['REMOVE LEFT']
                     item = item.removeprefix(filter_value)
+                elif 'REMOVE RIGHT' in filter_type:
+                    # Remove matching string on the right side
+                    filter_value = filter_type['REMOVE RIGHT']
+                    item = item.removesuffix(filter_value)
                 elif 'REVERSE' in filter_type:
                     # Reverse the text
                     item = item[::-1]

@@ -162,7 +162,7 @@ TYPE: github-tags
 ABSOLUTE_URLS: true
 FILTERS:
   - ENDS: '.tar.gz'
-  - RTRIM: '.tar.gz'
+  - REMOVE RIGHT: '.tar.gz'
   - APPEND: '.something'
   - REPLACE: '.something'
     WITH: '.different'
